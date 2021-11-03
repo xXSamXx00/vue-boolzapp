@@ -67,10 +67,10 @@
                     </div>
                 </div>
                 <div class="main_content">
-                    <div class="sent">
-
+                    <div v-for="(contact, i) in contacts" :class="contacts[i].messages[i]">
+                        {{ contacts[i].messages[i] }}
                     </div>
-                    <div class="received">
+                    <div v-for="(contact, i) in contacts" :class="status">
 
                     </div>
                 </div>

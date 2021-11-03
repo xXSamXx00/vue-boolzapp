@@ -1,3 +1,5 @@
+/* commone rules */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,6 +14,8 @@
     --bg-desktop: #8EDAFC;
     --bg-search: #F3EEEA;
     --bg-icon-search: #6B7376;
+    --bg-send-message: #D5F9BA;
+    --bg-recived-message: #FFFFFF;
 }
 
 body {
@@ -19,9 +23,12 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
+
+/* header */
+
 .green_bar {
     background-color: var(--bg-green);
-    height: 120px;
+    height: 125px;
     position: relative;
 }
 
@@ -31,20 +38,23 @@ body {
     position: absolute;
     top: 2%;
     left: 10%;
+    display: flex;
 }
 
 .side_left {
     width: 36%;
 }
 
-.user_image img {
+.user_image img,
+.last_access img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     display: block;
 }
 
-.user_image {
+.user_image,
+.last_access {
     display: flex;
     align-items: center;
 }
@@ -63,13 +73,14 @@ h3 {
     margin-right: 25px;
 }
 
-.username {
+.username,
+.user_info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--bg-user);
-    height: 103px;
     padding: 15px;
+    border-left: 1px solid var(--bg-body);
 }
 
 .desktop_notifications {
@@ -131,7 +142,57 @@ h3 {
     border-bottom: 1px solid var(--bg-user);
 }
 
+.user:hover {
+    background-color: var(--bg-user);
+}
+
 .user img {
     width: 20%;
     border-radius: 50%;
+}
+
+.user h3 {
+    margin-left: 20px;
+}
+
+
+/* content */
+
+.content {
+    width: 65%;
+    height: 100%;
+}
+
+.text_user {
+    margin-left: 20px;
+}
+
+.main_content {
+    background-image: url(../img/mine.jpg);
+    height: 640px;
+}
+
+.write_text {
+    padding: 15px;
+    background-color: var(--bg-search);
+    color: var(--bg-icon-search);
+    display: flex;
+    justify-content: space-around;
+    font-size: 40px;
+    align-items: center;
+}
+
+.write_text input {
+    width: 85%;
+    padding: 16px;
+    border-color: transparent;
+    font-size: 25px;
+}
+
+.sent {
+    background-color: var(--bg-send-message);
+}
+
+.received {
+    background-color: var(--bg-recived-message);
 }

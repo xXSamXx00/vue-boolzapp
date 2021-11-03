@@ -15,6 +15,7 @@
     <div id="root">
         <div class="green_bar"></div>
         <div class="container">
+            <!-- side_left -->
             <div class="side_left">
                 <div class="username">
                     <div class="user_image">
@@ -41,24 +42,45 @@
                     <input type="search" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <div class="users">
-                    <div class="user">
-                        <img src="./assets/img/avatar_1.jpg" alt="Immagine profilo">
-                        <h3>Michele</h3>
-                    </div>
-                    <div class="user">
-                        <img src="./assets/img/avatar_2.jpg" alt="Immagine profilo">
-                        <h3>Fabio</h3>
-                    </div>
-                    <div class="user">
-                        <img src="./assets/img/avatar_3.jpg" alt="Immagine profilo">
-                        <h3>Samuele</h3>
-                    </div>
-                    <div class="user">
-                        <img src="./assets/img/avatar_4.jpg" alt="Immagine profilo">
-                        <h3>Luisa</h3>
+                    <div v-for="(contact, i) in contacts" class="user">
+                        <img :src="'./assets/img/avatar' + contacts[i].avatar + '.jpg'" alt="Immagine profilo">
+                        <h3>{{ contacts[i].name }}</h3>
                     </div>
                 </div>
             </div>
+            <!-- /side_left -->
+
+            <!-- content -->
+            <div class="content">
+                <div class="user_info">
+                    <div class="last_access">
+                        <img src="./assets/img/avatar_1.jpg" alt>
+                        <div class="text_user">
+                            <h3>Michele</h3>
+                            <span>Ultimo accesso oggi alle</span>
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+                <div class="main_content">
+                    <div class="sent">
+
+                    </div>
+                    <div class="received">
+
+                    </div>
+                </div>
+                <div class="write_text">
+                    <i class="far fa-smile"></i>
+                    <input type="text" placeholder="Scrivi un messaggio">
+                    <i class="fas fa-microphone"></i>
+                </div>
+            </div>
+            <!-- /content -->
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>

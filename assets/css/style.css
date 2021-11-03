@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-green: #009688;
+    --bg-body: #D5DBD9;
+    --bg-user: #EAEAEA;
+    --bg-icon: #B1B1B1;
+    --bg-desktop: #8EDAFC;
+    --bg-search: #F3EEEA;
+    --bg-icon-search: #6B7376;
+}
+
+body {
+    background-color: var(--bg-body);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.green_bar {
+    background-color: var(--bg-green);
+    height: 120px;
+    position: relative;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    top: 2%;
+    left: 10%;
+}
+
+.side_left {
+    width: 36%;
+}
+
+.user_image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+}
+
+.user_image {
+    display: flex;
+    align-items: center;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.icons {
+    font-size: 34px;
+    color: var(--bg-icon);
+}
+
+.icons i {
+    margin-right: 25px;
+}
+
+.username {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-user);
+    height: 103px;
+    padding: 15px;
+}
+
+.desktop_notifications {
+    background-color: var(--bg-desktop);
+    padding: 25px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bell {
+    font-size: 32px;
+    color: var(--bg-desktop);
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+}
+
+.bell i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text a {
+    color: var(--bg-icon-search);
+    font-size: 20px;
+}
+
+.search {
+    background-color: var(--bg-search);
+    padding: 12px;
+    color: var(--bg-icon);
+    display: flex;
+}
+
+.search_icon {
+    background-color: white;
+    display: block;
+    padding: 10px 15px;
+    font-size: 22px;
+}
+
+.search input {
+    border: transparent;
+    width: 100%;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.user {
+    display: flex;
+    padding: 15px;
+    background-color: white;
+    height: 100%;
+    border-bottom: 1px solid var(--bg-user);
+}
+
+.user img {
+    width: 20%;
+    border-radius: 50%;
+}

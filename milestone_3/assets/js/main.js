@@ -88,6 +88,13 @@ const app = new Vue({
         changeUser(i) {
             this.activeUser = i
         },
+        createAnswer() {
+            this.contacts[this.activeUser].messages.push({
+                date: dayjs().format("DD/MM/YYYY H:mm:ss"),
+                text: "Ciao!",
+                status: 'received'
+            })
+        },
         sendMessage() {
             if (this.text != "") {
                 this.contacts[this.activeUser].messages.push({
@@ -95,13 +102,7 @@ const app = new Vue({
                     text: this.text,
                     status: 'sent'
                 })
-                setTimeout(
-                    this.contacts[this.activeUser].messages.push({
-                        date: dayjs().format("DD/MM/YYYY H:mm:ss"),
-                        text: "Ciao!",
-                        status: 'received'
-                    }), 1000
-                )
+                setTimeout(this.createAnswer, 1000);
             }
             this.text = ""
         }

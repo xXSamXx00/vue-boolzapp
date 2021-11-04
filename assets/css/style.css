@@ -134,12 +134,20 @@ h3 {
     padding-left: 20px;
 }
 
+.users {
+    overflow-y: auto;
+}
+
 .user {
     display: flex;
     padding: 15px;
     background-color: white;
-    height: 100%;
+    height: 133px;
     border-bottom: 1px solid var(--bg-user);
+}
+
+.user.active {
+    background-color: var(--bg-user);
 }
 
 .user:hover {
@@ -189,10 +197,12 @@ h3 {
     font-size: 25px;
 }
 
-.sent {
+.messsages {}
+
+.message.sent {
     background-color: var(--bg-send-message);
 }
 
-.received {
+.message.received {
     background-color: var(--bg-recived-message);
 }

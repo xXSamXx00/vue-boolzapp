@@ -80,6 +80,12 @@ const app = new Vue({
                     }
                 ]
             }
-        ]
+        ],
+        activeUser: 0
+    },
+    methods: {
+        changeUser(i) {
+            this.activeUser = i
+        }
     }
 });

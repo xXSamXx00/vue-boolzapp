@@ -1,0 +1,227 @@
+/* commone rules */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-green: #009688;
+    --bg-body: #D5DBD9;
+    --bg-user: #EAEAEA;
+    --bg-icon: #B1B1B1;
+    --bg-desktop: #8EDAFC;
+    --bg-search: #F3EEEA;
+    --bg-icon-search: #6B7376;
+    --bg-send-message: #D5F9BA;
+    --bg-recived-message: #FFFFFF;
+}
+
+body {
+    background-color: var(--bg-body);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+
+/* header */
+
+.green_bar {
+    background-color: var(--bg-green);
+    height: 125px;
+    position: relative;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    top: 2%;
+    left: 10%;
+    display: flex;
+}
+
+.side_left {
+    width: 36%;
+}
+
+.user_image img,
+.last_access img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+}
+
+.user_image,
+.last_access {
+    display: flex;
+    align-items: center;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.icons {
+    font-size: 34px;
+    color: var(--bg-icon);
+}
+
+.icons i {
+    margin-right: 25px;
+}
+
+.username,
+.user_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-user);
+    padding: 15px;
+    border-left: 1px solid var(--bg-body);
+}
+
+.desktop_notifications {
+    background-color: var(--bg-desktop);
+    padding: 25px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bell {
+    font-size: 32px;
+    color: var(--bg-desktop);
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+}
+
+.bell i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text a {
+    color: var(--bg-icon-search);
+    font-size: 20px;
+}
+
+.search {
+    background-color: var(--bg-search);
+    padding: 12px;
+    color: var(--bg-icon);
+    display: flex;
+}
+
+.search_icon {
+    background-color: white;
+    display: block;
+    padding: 10px 15px;
+    font-size: 22px;
+}
+
+.search input {
+    border: transparent;
+    width: 100%;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.users {
+    overflow-y: auto;
+}
+
+.user {
+    display: flex;
+    padding: 15px;
+    background-color: white;
+    height: 133px;
+    border-bottom: 1px solid var(--bg-user);
+}
+
+.user.active {
+    background-color: var(--bg-user);
+}
+
+.user:hover {
+    background-color: var(--bg-user);
+}
+
+.user img {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.user h3 {
+    margin-left: 20px;
+}
+
+
+/* content */
+
+.content {
+    width: 65%;
+    height: 100%;
+}
+
+.text_user {
+    margin-left: 20px;
+}
+
+.main_content {
+    background-image: url(../img/mine.jpg);
+    height: 640px;
+}
+
+.write_text {
+    padding: 15px;
+    background-color: var(--bg-search);
+    color: var(--bg-icon-search);
+    display: flex;
+    justify-content: space-around;
+    font-size: 40px;
+    align-items: center;
+}
+
+.write_text input {
+    width: 85%;
+    padding: 16px;
+    border-color: transparent;
+    font-size: 25px;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+}
+
+.message {
+    display: flex;
+    width: fit-content;
+    margin-top: 10px;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+.message p:first-child {
+    align-self: center;
+}
+
+.message.sent {
+    background-color: var(--bg-send-message);
+    align-self: flex-end;
+}
+
+.message.received {
+    background-color: var(--bg-recived-message);
+    align-self: flex-start;
+}

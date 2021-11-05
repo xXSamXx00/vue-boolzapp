@@ -46,7 +46,8 @@
                             <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
                             <div class="text_user_length">
                                 <h3>{{ contact.name }}</h3>
-                                <p>{{ contact.messages[contact.messages.length - 1].text }}</p>
+                                <p v-if="contact.messages[contact.messages.length - 1].text.length > 27">{{ contact.messages[contact.messages.length - 1].text.substr(0,27) + '...' }}</p>
+                                <p v-else>{{ contact.messages[contact.messages.length - 1].text }}</p>
                             </div>
                         </div>
                         <div class="last_date">

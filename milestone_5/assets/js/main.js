@@ -111,15 +111,9 @@ const app = new Vue({
         searchUser() {},
         dropDownMessage(i) {
             this.activeMessage = i
-            console.log(this.activeMessage);
         },
         removeMessage(i) {
             this.contacts[this.activeUser].messages.splice(i, 1)
         }
     }
 });
-
-const textLength = document.querySelector(".text_user_length > p")
-if (textLength.length > 15) {
-    textLength.substr(0, 15) + '...';
-}

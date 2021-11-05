@@ -256,8 +256,8 @@ h3 {
 
 .dropdown {
     position: absolute;
-    top: 20px;
-    right: -10px;
+    top: 24px;
+    right: -12px;
     width: 155px;
     border-radius: 10px;
     font-size: 15px;

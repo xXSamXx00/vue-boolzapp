@@ -112,3 +112,8 @@ const app = new Vue({
         }
     }
 });
+
+const textLenght = document.querySelector(".text_user_length > p")
+if (textLenght.length > 15) {
+    textLenght.substr(0, 15) + '...';
+}

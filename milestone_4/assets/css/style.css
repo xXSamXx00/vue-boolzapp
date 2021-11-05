@@ -142,6 +142,7 @@ h3 {
 .user {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding: 15px;
     background-color: white;
     border-bottom: 1px solid var(--bg-user);
@@ -163,6 +164,10 @@ h3 {
 
 .user h3 {
     font-size: 24px;
+}
+
+.image_text {
+    display: flex;
 }
 
 
@@ -212,16 +217,29 @@ h3 {
 .message {
     display: flex;
     flex-direction: column;
-    width: fit-content;
+    max-width: 100%;
     margin-top: 15px;
     padding: 15px 20px;
     border-radius: 10px;
-    height: 100%;
 }
 
-.message>p {
-    align-self: flex-start;
+.message_text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.message_text>p {
     font-size: 24px;
+    margin-right: 20px;
+}
+
+.message_text>i {
+    align-self: center;
+    visibility: hidden;
+}
+
+.message_text:hover>i {
+    visibility: visible;
 }
 
 .message .date {

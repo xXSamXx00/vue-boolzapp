@@ -241,6 +241,7 @@ h3 {
 .angle_down {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .angle_down>i {

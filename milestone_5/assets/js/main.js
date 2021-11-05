@@ -114,7 +114,7 @@ const app = new Vue({
             console.log(this.activeMessage);
         },
         removeMessage(i) {
-            this.contacts[this.activeMessage].messages.splice(i, 1)
+            this.contacts[this.activeUser].messages.splice(i, 1)
         }
     }
 });

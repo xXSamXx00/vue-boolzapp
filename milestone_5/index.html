@@ -46,12 +46,13 @@
                             <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
                             <div class="text_user_length">
                                 <h3>{{ contact.name }}</h3>
-                                <p v-if="contact.messages[contact.messages.length - 1].text.length > 27">{{ contact.messages[contact.messages.length - 1].text.substr(0,27) + '...' }}</p>
+                                <p v-if="!contact.messages.length">Nessun messaggio</p>
+                                <p v-else-if="contact.messages[contact.messages.length - 1].text.length > 27">{{ contact.messages[contact.messages.length - 1].text.substr(0,27) + '...' }}</p>
                                 <p v-else>{{ contact.messages[contact.messages.length - 1].text }}</p>
                             </div>
                         </div>
                         <div class="last_date">
-                            <p>{{ contact.messages[contact.messages.length - 1].date }}</p>
+                            <p v-if="contact.messages.length">{{ contact.messages[contact.messages.length - 1].date }}</p>
                         </div>
                     </div>
                 </div>

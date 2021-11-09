@@ -41,12 +41,12 @@
                     <input type="search" placeholder="Cerca o inizia una nuova chat" @keyup="searchUser" v-model="search">
                 </div>
                 <div class="users">
-                    <div @click="changeUser(i)" v-for="(contact, i) in contacts" class="user" :class="i === activeUser ? 'active' : ''" v-if="contact.name.toLowerCase().includes(search.toLowerCase())">
+                    <div @click="changeUser(i)" v-for="(contact, i) in contacts" class="user" :class="i === activeUser ? 'active' : ''" v-show="contact.name.toLowerCase().includes(search.toLowerCase())">
                         <div class="image_text">
                             <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
                             <div class="text_user_length">
                                 <h3>{{ contact.name }}</h3>
-                                <p v-if="!contact.messages.length">Nessun messaggio</p>
+                                <p v-if="!contact.messages.length"></p>
                                 <p v-else-if="contact.messages[contact.messages.length - 1].text.length > 27">{{ contact.messages[contact.messages.length - 1].text.substr(0,27) + '...' }}</p>
                                 <p v-else>{{ contact.messages[contact.messages.length - 1].text }}</p>
                             </div>
